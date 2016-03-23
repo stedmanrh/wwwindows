@@ -1,0 +1,406 @@
+/*TYPE*/
+@font-face {
+    font-family: 'OCRAStd';
+    src: url('../type/OCRAStd/OCRAStd.eot?#iefix') format('embedded-opentype'),
+        url('../type/OCRAStd/OCRAStd.woff') format('woff'),
+        url('../type/OCRAStd/OCRAStd.ttf')  format('truetype'),
+        url('../type/OCRAStd/OCRAStd.svg#OCRAStd') format('svg');
+}
+
+@font-face {
+    font-family: 'Silom';
+    src: url('../type/Silom/Silom.eot?#iefix') format('embedded-opentype'),
+        url('../type/Silom/Silom.woff') format('woff'),
+        url('../type/Silom/Silom.ttf')  format('truetype'),
+        url('../type/Silom/Silom.svg#Silom') format('svg');
+}
+
+.ocra {
+    font-family: "OCRAStd", monospace;
+}
+
+.silom {
+    font-family: "Silom", monospace;
+}
+
+.bitmap {
+    font-family: "Press Start 2P", monospace;
+}
+
+.vollkorn {
+    font-family: "Vollkorn", serif;
+}
+
+.sans {
+    font-family: "Arial", "Tahoma", "Verdana", sans-serif;
+}
+
+.serif {
+    font-family: "Times", serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background: url('../img/yosemite.png');
+    background-size: cover;
+}
+
+.window {
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,.25);
+    border-radius: 5px 5px 0 0;
+    position: absolute;
+    z-index: 0;
+    width: 400px;
+    height: 300px;
+    min-width: 300px;
+    min-height: 225px;
+}
+
+.window:not(.active) .title-bar {
+    opacity: .5;
+}
+
+.title-bar {
+    cursor: default;
+    background: #ddd;
+    height: 21px;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    padding-left: 3px;
+}
+
+.title {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+    color: #555;
+    margin: 0 auto;
+    display: inline-block;
+    margin-left: -35px;
+}
+
+.action {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    float: left;
+    margin: 4px;
+    color: #888;
+    background: #888;
+    border: 1px solid rgba(0,0,0,.1);
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 8px;
+}
+
+.action:hover {
+    color: black;
+}
+
+.viewport {
+    width: 100%;
+    overflow: scroll;
+}
+
+.content {
+    width: 1280px;
+    padding: 20px;
+}
+
+.content section {
+    float: left;
+}
+
+section.left {
+    width: 33%;
+    text-align: center;
+    margin-right: 5%;
+}
+
+section.right {
+    width: 45%;
+}
+
+hgroup {
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+.display {
+    font-size: 20px;
+}
+
+p {
+    line-height: 133%;
+    margin: 1em 0;
+}
+
+/*DEFINITION*/
+.definition .viewport {
+    background: black;
+    color: white;
+    font-family: "Vollkorn", serif;
+}
+
+.definition h1 {
+    border-bottom: 1px solid white;
+    line-height: 133%;
+    display: inline-block;
+    margin-bottom: 0em;
+}
+
+.definition .right {
+    margin-top: 108px;
+}
+
+#definition {
+    text-indent: -1.2em;
+    padding-left: 1.2em;
+}
+
+#definition:before {
+    content: "n";
+    margin-right: .5em;
+    font-weight: bold;
+}
+
+.definition h3 {
+    border-bottom: 1px solid white;
+    padding-bottom: .5em;
+    margin-bottom: .5em;
+}
+
+.definition .display {
+    margin: 3em 0;
+}
+
+.definition p {
+    line-height: 1.5em;
+}
+
+/*COMMAND LINE*/
+
+.cli .viewport {
+    background: black;
+    color: lime;
+    font-family: monospace;
+}
+
+.cli .content p:before{
+    content: "> ";
+}
+
+/*WINDOWS INTRODUCED*/
+
+.xerox, .win2 {
+    border-radius: 0;
+    border: 1px solid black;
+}
+
+.xerox .title-bar {
+    background: url('../img/xerox-bg.png');
+    border-radius: 0;
+    border-bottom: 2px solid black;
+    height: 24px;
+}
+
+.xerox .title {
+    font-size: 10px;
+    background: white;
+    padding: 0 1em;
+    color: black;
+}
+
+.xerox .action, .win2 .action {
+    border-radius: 0;
+    background: none;
+    border: none;
+    line-height: 14px;
+    color: black;
+}
+
+.xerox .viewport {
+    background: white;
+}
+
+.xerox h1 {
+    border-bottom: 1px solid black;
+    line-height: 133%;
+    display: inline-block;
+    margin-bottom: 0em;
+    font-size: 30px;
+    padding-bottom: .2em;
+}
+
+.xerox h2 {
+    font-size: 18px;
+}
+
+.xerox h3 {
+    border-bottom: 1px solid black;
+    padding-bottom: .5em;
+    margin: 3em 0 .5em;
+}
+
+.xerox .right {
+    margin-top: -20px;
+}
+
+.xerox p {
+    font-size: 12px;
+    line-height: 150%;
+}
+
+/*WINDOWS 2.0x*/
+.win2 .title-bar {
+    background: white;
+    border-radius: 0;
+    border-bottom: 2px solid black;
+    height: 24px;
+}
+
+.win2 .title {
+    background: black;
+    color: white;
+    line-height: 24px;
+}
+
+.win2 .viewport {
+    background: white;
+}
+
+.win2 h1 {
+    border-bottom: 1px solid black;
+    line-height: 133%;
+    display: inline-block;
+    margin-bottom: 0em;
+    font-size: 36px;
+    padding-bottom: .2em;
+}
+
+.win2 h2 {
+    font-size: 18px;
+}
+
+.win2 h3 {
+    border-bottom: 1px solid black;
+    padding-bottom: .5em;
+    margin: 3em 0 .5em;
+}
+
+.win2 .right {
+    margin-top: -10px;
+}
+
+.win2 p {
+    font-size: 12px;
+    line-height: 150%;
+}
+
+/*WINDOWS 95*/
+.win95 {
+    background: #C0C0C0;
+    border-radius: 0;
+    border: 1px solid black;
+    border-top-color: white;
+    border-left-color: white;
+}
+
+.win95 .title-bar {
+    background: #000080;
+    height: 30px;
+    border-radius: 0;
+    /*padding: 5px;*/
+    /*margin: 2px;*/
+}
+
+.win95 .title {
+    color: white;
+    line-height: 20px;
+    margin: 5px 0 0 50px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.win95 .action {
+    height: 20px;
+    width: 20px;
+    margin: 5px 3px;
+    background: #c0c0c0;
+    border: 1px solid;
+    border-top-color: white;
+    border-left-color: white;
+    border-radius: 0;
+    font-size: 16px;
+    color: black;
+    padding-top: 3px;
+    float: right;
+}
+
+.win95:not(.active) .title-bar {
+    opacity: 1.0;
+    background: #848484;
+}
+
+.win95 .max {
+    padding-top: 5px;
+    padding-right: 1px;
+}
+
+.win95 h1 {
+    font-size: 48px;
+    border-bottom: 1px solid black;
+    padding-bottom: .2em;
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.win95 .right {
+    margin-top: 10px;
+}
+
+.win95 h3 {
+    border-bottom: 1px solid black;
+    padding-bottom: .5em;
+    margin: 3em 0 .5em;
+}
+
+.win95 p {
+    font-family: "Times", serif;
+    line-height: 133%;
+}
+
+#popup img{
+    width: 300px;
+    margin-top: 50px;
+}
+
+#porn, #supahot{
+    display: none;
+    width: 300px;
+    height: 240px;
+    z-index: 1000;
+}
+
+footer small, footer a{
+    color: blue;
+}
+
+footer {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
