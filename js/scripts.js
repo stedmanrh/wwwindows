@@ -119,14 +119,5 @@ function switchBG(){
 //easter eggs
 $('#popup').click(function(){
     $(this).remove();
-    if(confirm("Ay bruh, u wanna bigger d*ck?")){
-        alert("Keep dreaming, Romeo.");
-    }
-    else if(confirm("Well I'm also a Nigerian banker. Click \"OK\" to accept your prize moneys!")){
-        $('#supahot').show().addClass('active');
-    }
-    else{
-        alert("Well done, ambition leads to ruin anyway.");
-        $('#porn').show().addClass('active');
-    }
+    alert('404: local singles not found')
 });
